@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px; */
+    
+    background: url('background-image-2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    
+}
+
+a{
+    text-decoration: none;
+    /* color: #000; */
+}
+
+/* main{
+    height: auto;
+    width: 100%;
+    display: flex;
+} */

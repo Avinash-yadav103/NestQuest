@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:linear-gradient(45deg,rgba(159, 140, 246, 0.5),rgba(126, 199, 226, 0.345));
+
+}
+
+.container{
+    /* max-width: 1000px; */
+    min-width: 800px;
+    padding: 5px;
+    background: rgb(55, 55, 98);
+    opacity: 0.7;
+    /* border-radius: 5px; */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.top-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+.form-main{
+    width: 100%;
+    height: auto;
+    max-width: 790px;
+    padding: 5px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.head-text{
+    width: 70%;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px 0;
+    text-align: center;
+    padding-right: 20px;
+}
+
+.first-img img{
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px 0 0 5px;
+    padding: 0 20px 0 20px;
+}
+
+.bottom-bar{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 20px;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.p1{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* Table content */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+
+
+/* Table content */
+
+
+.p2{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+.rating {
+    display: inline-block;
+    opacity: 1;
+  }
+  
+  .rating input {
+    display: none;
+    opacity: 1;
+  }
+  
+  .rating label {
+    float: right;
+    cursor: pointer;
+    color: #ccc;
+    transition: color 0.3s, transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .rating label:before {
+    content: '\2605';
+    font-size: 30px;
+    transition: color 0.3s;
+  }
+  
+  .rating input:checked ~ label,
+  .rating label:hover,
+  .rating label:hover ~ label {
+    color: #ffc300;
+    transform: scale(1.2);
+    transition: color 0.3s, transform 0.3s, box-shadow 0.3s;
+    animation: bounce 0.5s ease-in-out alternate;
+  }
+  
+  @keyframes bounce {
+    to {
+      transform: scale(1.3);
+    }
+  }

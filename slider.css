@@ -1,0 +1,11 @@
+.slider{
+    position: absolute;
+    z-index: 5;
+    width: 40vh;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #e3efed;
+    /* background: linear-gradient(90deg, #e3efed , transparent); */
+    opacity: 0.9;
+}
