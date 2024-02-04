@@ -1,5 +1,5 @@
 .slider{
-    position: absolute;
+    position: fixed;
     z-index: 5;
     width: 40vh;
     height: 100%;
@@ -8,4 +8,123 @@
     background-color: #e3efed;
     /* background: linear-gradient(90deg, #e3efed , transparent); */
     opacity: 0.9;
+    font-family: 'Kanit', sans-serif;
+
 }
+
+.slider-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    height: 10%;
+}
+
+
+.slider-top p{
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 10px;
+    color: white;
+
+}
+
+.slider-top i{
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 10px;
+    color: white;
+}
+
+.slider-bottom{
+    padding: 20px;
+    /* display: flex;
+    justify-content: flex-start;
+    align-items: center; */
+    /* background-color: black; */
+    /* flex-direction: column; */
+    overflow-y: scroll;
+    height: 90%;
+}
+
+.filter-p{
+    font-size: 1.35rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.filter-price-range{
+    font-size: 1.1rem;
+    /* display: flex;
+    align-items: center;
+    justify-content: flex-start; */
+    /* flex-direction: column; */
+}
+
+.price-1{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.price-2{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.filter-price-range label{
+    padding: 5px;
+    /* font-size: 0.7rem; */
+}
+
+.filter-price-range p{
+
+    font-size: 0.9rem;
+
+}
+
+.slider-container{
+    overflow: hidden;
+    width: 100%; 
+    max-width: 600px; 
+    margin: auto;
+    position: relative; 
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #1abc9c;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-size: 24px;
+}
+
+/* Button styles */
+.prev, .next {
+    cursor: pointer;
+    /* position: absolute; */
+    /* top: 50%; */
+    /* width: auto; */
+    /* margin-top: -30px; */
+    /* padding: 16px; */
+    /* color: white; */
+    /* font-weight: bold; */
+    font-size: 30px;
+    /* border: none; */
+    /* border-radius: 5px; */
+    /* background-color: #333; */
+}
+
+.prev { left: 0; }
+.next { right: 0; }
