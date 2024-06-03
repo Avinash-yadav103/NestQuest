@@ -1,64 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Styles for the slide container and individual slide */
+        .slide-container {
+            overflow: hidden;
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+            position: relative;
+        }
 
-    th, td {
-      border: 1px solid #ddd;
-      padding: 8px;
-      text-align: center;
-    }
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
 
-    th {
-      background-color: #f2f2f2;
-    }
-  </style>
-  <title>Table with 9 Rows and 6 Columns</title>
+        .slide {
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #1abc9c;
+            text-align: center;
+            padding: 20px;
+            color: white;
+            font-size: 24px;
+        }
+
+        /* Button styles */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -30px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+        }
+
+        .prev { left: 0; }
+        .next { right: 0; }
+    </style>
 </head>
 <body>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Column 1</th>
-        <th>Not Satisfied</th>
-        <th>Somewhat Satisfied</th>
-        <th>Satisfied</th>
-        <th>Very Satisfied</th>
-        <th>N/A</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- Row 1 -->
-      <tr>
-        <td>Row 1, Col 1</td>
-        <td>Row 1, Col 2</td>
-        <td>Row 1, Col 3</td>
-        <td>Row 1, Col 4</td>
-        <td>Row 1, Col 5</td>
-        <td>Row 1, Col 6</td>
-      </tr>
-      <!-- Row 2 -->
-      <tr>
-        <td>Row 2, Col 1</td>
-        <td>Row 2, Col 2</td>
-        <td>Row 2, Col 3</td>
-        <td>Row 2, Col 4</td>
-        <td>Row 2, Col 5</td>
-        <td>Row 2, Col 6</td>
-      </tr>
-      <!-- Add more rows as needed -->
-      <!-- Row 3 to Row 9 -->
-      <!-- ... -->
-    </tbody>
-  </table>
+<div class="slide-container">
+    <div class="slides">
+        <div class="slide">Your Single Slide Content Goes Here</div>
+    </div>
+</div>
+
+<button class="prev" onclick="changeSlide(-1)">Previous</button>
+<button class="next" onclick="changeSlide(1)">Next</button>
+
+<script>
+    let currentIndex = 0;
+
+    function changeSlide(direction) {
+        const slidesContainer = document.querySelector('.slides');
+        const slideWidth = document.querySelector('.slide').offsetWidth;
+
+        currentIndex += direction;
+
+        if (currentIndex < 0) {
+            currentIndex = 0; // Prevent sliding to the left when at the first slide
+        }
+
+        const transformValue = -currentIndex * slideWidth + 'px';
+        slidesContainer.style.transform = 'translateX(' + transformValue + ')';
+    }
+</script>
 
 </body>
 </html>
+
+
+<!-- slides = slider -->
